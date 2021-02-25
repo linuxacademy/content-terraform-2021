@@ -7,7 +7,7 @@ terraform {
 }
 
 provider "aws" {
-  region  = "us-west-2"
+  region  = "us-east-1"
 }
 
 data "aws_availability_zones" "available" {
@@ -110,7 +110,7 @@ module "ec2_instances" {
   source = "./modules/aws-instance"
 
   instance_count     = 2
-  instance_type      = "t2.micro"
+  instance_type      = "t3.micro"
   subnet_ids         = module.vpc.private_subnets[*]
   security_group_ids = [module.app_security_group.this_security_group_id]
 
