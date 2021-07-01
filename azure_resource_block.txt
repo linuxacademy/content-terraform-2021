@@ -1,7 +1,7 @@
-# Create a virtual network
-resource "azurerm_virtual_network" "vnet" {
-    name                = "myTFVnet"
-    address_space       = ["10.0.0.0/16"]
-    location            = "westus2"
-    resource_group_name = azurerm_resource_group.rg.name
-}
+# Create subnet
+    resource "azurerm_subnet" "Robins" {
+        name                 = "default"
+        resource_group_name = "<Add YOUR RESOURCE GROUP NAME>"
+        virtual_network_name = azurerm_virtual_network.BatmanInc.name
+        address_prefix       = "10.0.1.0/24"
+    }
