@@ -17,8 +17,8 @@ provider "azurerm" {
 
 # Create a virtual network
 resource "azurerm_virtual_network" "vnet" {
-  name                = "myTFVnet"
+  name                = "BatmanInc"
   address_space       = ["10.0.0.0/16"]
   location            = "Central US"
-  resource_group_name = "<ADD YOUR RECOURCE GROUP>"
+  resource_group_name = "<ADD YOUR RESOURCE GROUP NAME>"
 }
