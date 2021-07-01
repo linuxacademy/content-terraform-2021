@@ -12,9 +12,13 @@ terraform {
 
 provider "azurerm" {
   features {}
+  skip_provider_registration = true
 }
 
-resource "azurerm_resource_group" "rg" {
-  name     = "myTFResourceGroup"
-  location = "westus2"
+# Create a virtual network
+resource "azurerm_virtual_network" "vnet" {
+  name                = "myTFVnet"
+  address_space       = ["10.0.0.0/16"]
+  location            = "Central US"
+  resource_group_name = "<ADD YOUR RECOURCE GROUP>"
 }
