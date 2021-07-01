@@ -5,3 +5,9 @@
         virtual_network_name = azurerm_virtual_network.BatmanInc.name
         address_prefix       = "10.0.1.0/24"
     }
+
+# Create Tag
+    tags = {
+      Environment = "Terraform Getting Started"
+      Team = "Batman"
+    }
