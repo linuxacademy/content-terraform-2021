@@ -8,7 +8,7 @@
 
 # Create Tag
    resource "azurerm_resource_group" "rg" {
-      name     = "1-cefaa701-playground-sandbox"
+      name     = "<Add YOUR RESOURCE GROUP NAME>"
       location = "centralus"
       tags = {
         Environment = "Terraform Getting Started"
