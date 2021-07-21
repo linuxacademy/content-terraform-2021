@@ -1,8 +1,8 @@
 resource "kubernetes_deployment" "nginx" {
   metadata {
-    name = "Long-Live-THe-Bat"
+    name = "long-live-the-bat"
     labels = {
-      App = "LongLiveTheBat"
+      App = "longlivethebat"
     }
   }
 
@@ -10,19 +10,19 @@ resource "kubernetes_deployment" "nginx" {
     replicas = 2
     selector {
       match_labels = {
-        App = "LongLiveTheBat"
+        App = "longlivethebat"
       }
     }
     template {
       metadata {
         labels = {
-          App = "LongLiveTheBat"
+          App = "longlivethebat"
         }
       }
       spec {
         container {
           image = "nginx:1.7.8"
-          name  = "Batman"
+          name  = "batman"
 
           port {
             container_port = 80
