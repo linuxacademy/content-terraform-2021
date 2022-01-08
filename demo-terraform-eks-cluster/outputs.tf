@@ -25,7 +25,12 @@ output "config_map_aws_auth" {
 
 output "region" {
   description = "AWS region"
-  value       = var.region
+  value       = var.aws_region
+}
+
+output "profile" {
+  description = "AWS CLI profile"
+  value      = var.aws_profile
 }
 
 output "cluster_name" {
