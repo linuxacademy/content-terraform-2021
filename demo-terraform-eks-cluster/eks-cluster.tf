@@ -3,6 +3,13 @@ module "eks" {
   version         = "17.24.0"
   cluster_name    = local.cluster_name
   cluster_version = "1.20"
+  
+  # this ensures that we can still use the properties
+  # `subnets`, `worker_groups_defaults` and `worker_groups`
+  # that since version 18.0.0 are no longer supported.
+  #
+  version	  = "17.24.0"
+  
   subnets         = module.vpc.private_subnets
 
   tags = {
